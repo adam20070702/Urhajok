@@ -22,7 +22,7 @@
             <Button x:Name="kereses" Content="Keresés név alapján" Height="20" Margin="10" Click="kereses_Click"/>
         </StackPanel>
         <StackPanel Grid.Column="1">
-
+            <DataGrid x:Name="datagrid"></DataGrid>
         </StackPanel>
     </Grid>
 </Window>
