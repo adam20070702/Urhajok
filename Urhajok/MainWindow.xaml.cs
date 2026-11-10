@@ -76,6 +76,13 @@ namespace Urhajok
 
         private void hatotav_Click(object sender, RoutedEventArgs e)
         {
+            if (urhajoLista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve az űrhajók");
+                return;
+            }
+            var legnagyobb = urhajoLista.OrderByDescending(u => u.MaxHatótáv).First();
+            MessageBox.Show("A legnagyobb hatótávú űrhajó: " + legnagyobb.Név + " " + legnagyobb.MaxHatótáv + " km");
 
         }
 
