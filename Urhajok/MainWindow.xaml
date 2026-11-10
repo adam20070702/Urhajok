@@ -20,6 +20,8 @@
             <Button x:Name="atlag" Content="Átlagos legénységszám" Height="20" Margin="10" Click="atlag_Click"/>
             <Button x:Name="gyartok" Content="Gyártók szerinti csoportosítás" Height="20" Margin="10" Click="gyartok_Click"/>
             <Button x:Name="kereses" Content="Keresés név alapján" Height="20" Margin="10" Click="kereses_Click"/>
+            <Label Foreground="White" FontSize="15" FontWeight="Bold" >Keresett név</Label>
+            <TextBox x:Name="keresettNev"></TextBox>
         </StackPanel>
         <StackPanel Grid.Column="1">
             <DataGrid x:Name="datagrid"></DataGrid>

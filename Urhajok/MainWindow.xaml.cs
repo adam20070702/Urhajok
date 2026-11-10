@@ -123,7 +123,17 @@ namespace Urhajok
 
         private void kereses_Click(object sender, RoutedEventArgs e)
         {
+            if (urhajoLista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve az űrhajók");
+                return;
+            }
+            string nev = keresettNev.Text;
+            var talalat = urhajoLista.FirstOrDefault(u => u.Név == nev);
 
+            datagrid.ItemsSource = urhajoLista
+                    .Where(u => u.Név.ToLower() == keresettNev.Text.ToLower())
+                    .ToList();
         }
     }
 }
