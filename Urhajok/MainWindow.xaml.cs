@@ -88,6 +88,13 @@ namespace Urhajok
 
         private void kuldetes_Click(object sender, RoutedEventArgs e)
         {
+            if (urhajoLista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve az űrhajók");
+                return;
+            }
+            var sikeresek = urhajoLista.Where(u => u.KüldetésStátusz=="Sikeres").Select(u=>u.Név);
+            MessageBox.Show("Sikeres küldetések:\n" + string.Join("\n", sikeresek));
 
         }
 
