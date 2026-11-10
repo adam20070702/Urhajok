@@ -113,7 +113,12 @@ namespace Urhajok
 
         private void gyartok_Click(object sender, RoutedEventArgs e)
         {
-
+            if (urhajoLista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve az űrhajók");
+                return;
+            }
+            datagrid.ItemsSource = urhajoLista.OrderBy(u => u.Gyártó).ToList();
         }
 
         private void kereses_Click(object sender, RoutedEventArgs e)
