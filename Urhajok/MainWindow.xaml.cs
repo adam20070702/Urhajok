@@ -38,7 +38,7 @@ namespace Urhajok
                 KüldetésStátusz = küldetésStátusz;
                 IndításÉve = indításÉve;
             }
-        
+
         }
         List<Urhajok> urhajoLista = new List<Urhajok>();
         public MainWindow()
@@ -93,15 +93,23 @@ namespace Urhajok
                 MessageBox.Show("Nincsenek betöltve az űrhajók");
                 return;
             }
-            var sikeresek = urhajoLista.Where(u => u.KüldetésStátusz=="Sikeres").Select(u=>u.Név);
+            var sikeresek = urhajoLista.Where(u => u.KüldetésStátusz == "Sikeres").Select(u => u.Név);
             MessageBox.Show("Sikeres küldetések:\n" + string.Join("\n", sikeresek));
 
         }
 
         private void atlag_Click(object sender, RoutedEventArgs e)
         {
-
+            if (urhajoLista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve az űrhajók");
+                return;
+            }
+            double atlag = urhajoLista.Average(u => u.Legénység);
+            MessageBox.Show($"Átlagos legénység: {atlag:F2} fő");
         }
+
+    
 
         private void gyartok_Click(object sender, RoutedEventArgs e)
         {
