@@ -20,5 +20,35 @@ namespace Urhajok
         {
             InitializeComponent();
         }
+
+        private void betolt_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void urhajokszama_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void hatotav_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void kuldetes_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void atlag_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void gyartok_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
