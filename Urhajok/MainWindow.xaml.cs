@@ -66,7 +66,12 @@ namespace Urhajok
 
         private void urhajokszama_Click(object sender, RoutedEventArgs e)
         {
-
+            if (urhajoLista.Count == 0)
+            {
+                MessageBox.Show("Nincsenek betöltve az űrhajók");
+                return;
+            }
+            MessageBox.Show("Űrhajók száma: " + urhajoLista.Count);
         }
 
         private void hatotav_Click(object sender, RoutedEventArgs e)
